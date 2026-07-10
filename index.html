@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cewek | Premium Visual Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CEWEK</h1>
+    
+    <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="SEARCH GALLERY..." autocomplete="off">
+    </div>
+
+    <div id="loading">DISCOVERING CONTENT...</div>
+    
+    <div class="pagination-controls">
+        <button id="prevPageTop">PREV</button>
+        <div id="pageNumbersTop" class="page-numbers-container"></div>
+        <button id="nextPageTop">NEXT</button>
+    </div>
+
+    <div id="gallery" class="gallery-container"></div>
+
+    <div class="pagination-controls">
+        <button id="prevPageBottom">PREV</button>
+        <div id="pageNumbersBottom" class="page-numbers-container"></div>
+        <button id="nextPageBottom">NEXT</button>
+    </div>
+
+    <!-- Image Viewer Modal -->
+    <div id="imageModal" class="modal">
+        <div class="close-modal" id="closeModal">✕</div>
+        <div class="modal-wrapper">
+            <button id="prevBtn" class="nav-btn prev-style">PREV</button>
+            <button id="nextBtn" class="nav-btn next-style">NEXT</button>
+
+            <div class="modal-content">
+                <div id="modalLoader" class="modal-loader">LOADING...</div>
+                
+                <div class="modal-main-layout">
+                    <div id="tagWrapper" class="tag-wrapper-box">
+                        <img src="" id="modalImg" style="display:none;">
+                        <div id="tagContainer" class="photo-tag-container"></div>
+                    </div>
+
+                    <button id="tagDrawerBtn" class="tag-drawer-btn">TAGS</button>
+
+                    <div id="tagSidePanel" class="tag-side-panel">
+                        <div class="side-panel-header">CONTENT TAGS</div>
+                        <div id="tagList" class="tag-list-container"></div>
+                        <button id="showAllTagsBtn" class="show-all-btn">SHOW ALL TAGS</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-info">
+                <span id="modalCaption"></span>
+                <div class="modal-actions">
+                    <a href="" id="downloadBtn" target="_blank" class="download-btn">ORIGINAL RESOLUTION</a>
+                    <button id="directDownloadBtn" class="download-btn">DOWNLOAD IMAGE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
